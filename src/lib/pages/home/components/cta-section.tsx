@@ -1,7 +1,7 @@
 import { Box, Button, Flex, Image, Link } from '@chakra-ui/react';
 import { AiFillGithub } from 'react-icons/ai';
 
-const repoLink = 'https://github.com/agustinusnathaniel/nextarter-chakra';
+import { siteConfig } from '@/lib/config/site';
 
 export const CTASection = () => {
   return (
@@ -48,7 +48,7 @@ export const CTASection = () => {
           </a>
         </Button>
         <Button asChild size="sm">
-          <a href={repoLink} target="_blank">
+          <a href={siteConfig.githubUrl} target="_blank">
             <AiFillGithub />
             Open in Github
           </a>
