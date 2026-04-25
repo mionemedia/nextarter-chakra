@@ -41,14 +41,15 @@ export const CTASection = () => {
       <Flex justifyContent="center" alignItems="center" gap={2}>
         <Button asChild size="sm">
           <a
-            href="https://github.com/agustinusnathaniel/nextarter-chakra/generate"
+            href={`${siteConfig.githubUrl}/generate`}
             target="_blank"
+            rel="noopener noreferrer"
           >
             Use This Template
           </a>
         </Button>
         <Button asChild size="sm">
-          <a href={siteConfig.githubUrl} target="_blank">
+          <a href={siteConfig.githubUrl} target="_blank" rel="noopener noreferrer">
             <AiFillGithub />
             Open in Github
           </a>

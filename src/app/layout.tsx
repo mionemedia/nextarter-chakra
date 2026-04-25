@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from 'next';
 
 import { Provider } from '@/components/ui/provider';
 import { Layout } from '@/lib/layout';
+import { siteConfig } from '@/lib/config/site';
+import { fontBody } from '@/lib/styles/theme/fonts';
 
 type RootLayoutProps = {
   children: React.ReactNode;
@@ -22,7 +24,7 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    url: 'https://nextarter-chakra.sznm.dev',
+    url: siteConfig.siteUrl,
     title: 'nextarter-chakra',
     description: 'Next.js + chakra-ui + TypeScript template',
     images: {
@@ -44,7 +46,7 @@ export const viewport: Viewport = {
 
 const RootLayout = ({ children }: RootLayoutProps) => {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={fontBody.variable} suppressHydrationWarning>
       <body>
         <Provider>
           <Layout>{children}</Layout>
