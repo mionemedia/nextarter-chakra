@@ -1,8 +1,8 @@
 import { Flex } from '@chakra-ui/react';
 
 import { CTASection } from './components/cta-section';
-import { SomeImage } from './components/some-image';
-import { SomeText } from './components/some-text';
+import { TechStackLogos } from './components/tech-stack-logos';
+import { HeroHeading } from './components/hero-heading';
 
 export const Home = () => {
   return (
@@ -15,8 +15,8 @@ export const Home = () => {
       mb={8}
       w="full"
     >
-      <SomeText />
-      <SomeImage />
+      <HeroHeading />
+      <TechStackLogos />
       <CTASection />
     </Flex>
   );

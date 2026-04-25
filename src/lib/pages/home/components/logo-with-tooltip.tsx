@@ -6,12 +6,12 @@ type HelperImageProps = {
   src: string;
 };
 
-const size = 5;
+const LOGO_SIZE = 5; // Chakra spacing token — 20px
 
-export const HelperImage = ({ label = '', src }: HelperImageProps) => {
+export const LogoWithTooltip = ({ label = '', src }: HelperImageProps) => {
   return (
     <Tooltip showArrow aria-label={label} content={label}>
-      <Image src={src} alt={label} title={label} height={size} width={size} />
+      <Image src={src} alt={label} title={label} height={LOGO_SIZE} width={LOGO_SIZE} />
     </Tooltip>
   );
 };
