@@ -1,6 +1,6 @@
 import { Grid, Heading, Text } from '@chakra-ui/react';
 
-export const SomeText = () => {
+export const HeroHeading = () => {
   return (
     <Grid textAlign="center">
       <Heading as="h1" size="2xl" fontWeight="bold">
