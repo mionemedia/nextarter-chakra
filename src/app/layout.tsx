@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 
+import { ErrorBoundary } from '@/components/error-boundary';
 import { Provider } from '@/components/ui/provider';
 import { Layout } from '@/lib/layout';
 
@@ -47,7 +48,9 @@ const RootLayout = ({ children }: RootLayoutProps) => {
     <html lang="en" suppressHydrationWarning>
       <body>
         <Provider>
-          <Layout>{children}</Layout>
+          <ErrorBoundary>
+            <Layout>{children}</Layout>
+          </ErrorBoundary>
         </Provider>
       </body>
     </html>
